@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patologia: Memorex Interativo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .category-title {
+            color: #34495e;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .term-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .term-list li {
+            background: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .term-list li:hover {
+            background-color: #e0e6e7;
+        }
+        .term-title {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .term-definition {
+            display: none;
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #3498db;
+            color: #555;
+        }
+        .citation {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Patologia: Memorex Interativo</h1>
+    <p>Clique nos termos para ver as definições e te ajudar a memorizar!</p>
+
+    <h2 class="category-title" onclick="toggleCategory('acumulos')">Acúmulos Intracelulares</h2>
+    <ul id="acumulos" class="term-list">
+        <li>
+            <div class="term-title">Acúmulo Intracelular</div>
+            <div class="term-definition">Substâncias anormais dentro das células.</div>
+        </li>
+        <li>
+            <div class="term-title">Esteatose (Degeneração Gordurosa)</div>
+            <div class="term-definition">Acúmulo de gordura (triglicerídeos) no fígado.</div>
+        </li>
+        <li>
+            <div class="term-title">Aterosclerose</div>
+            <div class="term-definition">Placas de gordura (colesterol) nas artérias.</div>
+        </li>
+        <li>
+            <div class="term-title">Xantomas</div>
+            <div class="term-definition">Acúmulo de colesterol em macrófagos na pele.</div>
+        </li>
+        <li>
+            <div class="term-title">Amiloidose</div>
+            <div class="term-definition">Depósito de proteínas anormais que pode causar insuficiência cardíaca (cardiomiopatia restritiva).</div>
+        </li>
+        <li>
+            <div class="term-title">Glicogenoses</div>
+            <div class="term-definition">Acúmulo de glicogênio devido a um erro metabólico hereditário.</div>
+        </li>
+        <li>
+            <div class="term-title">Pneumoconiose</div>
+            <div class="term-definition">Acúmulo de partículas (como pó de carvão) nos pulmões. O carbono é fagocitado por macrófagos.</div>
+        </li>
+        <li>
+            <div class="term-title">Calcificação Distrófica</div>
+            <div class="term-definition">Depósito de cálcio em tecido lesionado.</div>
+        </li>
+        <li>
+            <div class="term-title">Calcificação Metastática</div>
+            <div class="term-definition">Depósito de cálcio em tecido normal devido à hipercalcemia, comum em casos de insuficiência renal.</div>
+        </li>
+    </ul>
+    
+    <h2 class="category-title" onclick="toggleCategory('adaptacoes')">Adaptações e Lesões Celulares</h2>
+    <ul id="adaptacoes" class="term-list">
+        <li>
+            <div class="term-title">Homeostase</div>
+            <div class="term-definition">Equilíbrio celular.</div>
+        </li>
+        <li>
+            <div class="term-title">Adaptações</div>
+            <div class="term-definition">Mudanças reversíveis para lidar com o estresse.</div>
+        </li>
+        <li>
+            <div class="term-title">Hipertrofia</div>
+            <div class="term-definition">Células aumentam de tamanho. Ex: coração de atleta.</div>
+        </li>
+        <li>
+            <div class="term-title">Hiperplasia</div>
+            <div class="term-definition">Células aumentam em número. Ex: útero na gravidez.</div>
+        </li>
+        <li>
+            <div class="term-title">Atrofia</div>
+            <div class="term-definition">Células diminuem de tamanho. Ex: músculo por desuso.</div>
+        </li>
+        <li>
+            <div class="term-title">Metaplasia</div>
+            <div class="term-definition">Um tipo de célula é substituído por outro. Ex: esôfago de Barrett.</div>
+        </li>
+        <li>
+            <div class="term-title">Displasia</div>
+            <div class="term-definition">Crescimento celular desordenado.</div>
+        </li>
+    </ul>
+
+    <h2 class="category-title" onclick="toggleCategory('morte')">Morte Celular e Mecanismos de Lesão</h2>
+    <ul id="morte" class="term-list">
+        <li>
+            <div class="term-title">Isquemia</div>
+            <div class="term-definition">Falta de fluxo sanguíneo para um tecido.</div>
+        </li>
+        <li>
+            <div class="term-title">Hipóxia</div>
+            <div class="term-definition">Falta de oxigênio.</div>
+        </li>
+        <li>
+            <div class="term-title">Depleção de ATP</div>
+            <div class="term-definition">Falta de energia na célula. Causa necrose.</div>
+        </li>
+        <li>
+            <div class="term-title">ERO (Radicais Livres)</div>
+            <div class="term-definition">Espécies reativas de oxigênio que causam danos.</div>
+        </li>
+        <li>
+            <div class="term-title">Aumento de Cálcio Intracelular</div>
+            <div class="term-definition">Ativa enzimas que danificam a célula, levando a lesão de membrana e necrose.</div>
+        </li>
+        <li>
+            <div class="term-title">Apoptose</div>
+            <div class="term-definition">Morte celular programada.</div>
+        </li>
+    </ul>
+
+    <h2 class="category-title" onclick="toggleCategory('doencas')">Doenças Específicas</h2>
+    <ul id="doencas" class="term-list">
+        <li>
+            <div class="term-title">Esteatose Hepática Aguda da Gestação (EHAG)</div>
+            <div class="term-definition">Condição rara da gravidez, que cursa com infiltração gordurosa do fígado e pode levar à falência de múltiplos órgãos. O parto é o único tratamento curativo.</div>
+        </li>
+        <li>
+            <div class="term-title">Pneumoconiose</div>
+            <div class="term-definition">Doença pulmonar causada pela inalação de pó de carvão.</div>
+        </li>
+        <li>
+            <div class="term-title">Amiloidose Cardíaca</div>
+            <div class="term-definition">Acúmulo de proteínas no coração, causando cardiomiopatia restritiva.</div>
+        </li>
+    </ul>
+    
+    <p style="text-align: center; font-size: 0.9em; color: #7f8c8d; margin-top: 30px;">
+        Este material foi criado com base em slides e artigos da disciplina de Patologia Geral.
+    </p>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const terms = document.querySelectorAll('.term-list li');
+        terms.forEach(term => {
+            term.addEventListener('click', function() {
+                const definition = this.querySelector('.term-definition');
+                if (definition.style.display === 'block') {
+                    definition.style.display = 'none';
+                } else {
+                    definition.style.display = 'block';
+                }
+            });
+        });
+    });
+
+    function toggleCategory(categoryId) {
+        const category = document.getElementById(categoryId);
+        if (category.style.display === 'block' || category.style.display === '') {
+            category.style.display = 'none';
+        } else {
+            category.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
