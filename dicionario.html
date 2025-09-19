@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patologia: Memorex Interativo</title>
+    <title>Patologia Geral: Memorex PR1 - IDOMED Quixada</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -99,7 +99,7 @@
         </li>
         <li>
             <div class="term-title">Glicogenoses</div>
-            <div class="term-definition">Afecções decorrentes de erros do metabolismo hereditário, com consequente anormalidade na concentração e/ou na estrutura do glicogênio nos tecidos.</div>
+            <div class="term-definition">Afecções decorrentes de erros do metabolismo hereditário, com consequente anormalidade na concentração e/ou na estrutura do glicogênio nos tecidos. Exemplo: **Doença de Von Gierke (Glicogenose Tipo I)**, causada pela deficiência da enzima glicose-6-fosfatase (G6Pase), levando ao acúmulo anormal de glicogênio no fígado, rins e intestino.</div>
         </li>
         <li>
             <div class="term-title">Pneumoconiose</div>
@@ -111,7 +111,7 @@
         </li>
         <li>
             <div class="term-title">Calcificação Metastática</div>
-            <div class="term-definition">Deposição de sais de cálcio em tecidos normais sempre que há hipercalcemia. É mais comum em pacientes que realizaram hemodiálise devido a insuficiência renal crônica.</div>
+            <div class="term-definition">Deposição de sais de cálcio em tecidos normais sempre que há **hipercalcemia** (aumento de cálcio sérico), que pode ser causada por insuficiência renal crônica (IRC), hiperparatireoidismo, ou mieloma múltiplo. O pulmão é o tecido mais suscetível.</div>
         </li>
     </ul>
 
@@ -143,8 +143,8 @@
         </li>
     </ul>
 
-    <h2 class="category-title" onclick="toggleCategory('morte')">Morte Celular e Mecanismos de Lesão</h2>
-    <ul id="morte" class="term-list">
+    <h2 class="category-title" onclick="toggleCategory('mecanismos')">Mecanismos de Lesão Celular</h2>
+    <ul id="mecanismos" class="term-list">
         <li>
             <div class="term-title">Isquemia</div>
             <div class="term-definition">Redução do fluxo sanguíneo para um tecido. Causa mais comum de lesão celular aguda.</div>
@@ -165,14 +165,34 @@
             <div class="term-title">Aumento de Cálcio Intracelular</div>
             <div class="term-definition">Aumento da concentração de cálcio no citosol, o que ativa várias enzimas (fosfolipase, protease, endonuclease) com efeitos potencialmente prejudiciais que levam a lesão da membrana e do núcleo.</div>
         </li>
+    </ul>
+
+    <h2 class="category-title" onclick="toggleCategory('tipos-morte')">Tipos de Morte Celular</h2>
+    <ul id="tipos-morte" class="term-list">
         <li>
             <div class="term-title">Apoptose</div>
             <div class="term-definition">Morte celular programada. As células mortas são fagocitadas por células vizinhas ou por macrófagos, sem extravasamento de conteúdo e sem causar inflamação.</div>
         </li>
+        <li>
+            <div class="term-title">Necrose</div>
+            <div class="term-definition">É a morte celular acidental, caracterizada pela perda da integridade da membrana e extravasamento do conteúdo celular, culminando na dissolução da célula por ação de enzimas. Causa inflamação.</div>
+        </li>
+        <li>
+            <div class="term-title">Necroptose</div>
+            <div class="term-definition">Uma forma programada de necrose, que é uma morte celular inflamatória. Serve como defesa contra patógenos (defesa viral).</div>
+        </li>
+        <li>
+            <div class="term-title">Netose</div>
+            <div class="term-definition">Morte celular regulada por neutrófilos, que liberam redes extracelulares (NETs) formadas por DNA, histonas e proteínas antimicrobianas para prender e matar patógenos.</div>
+        </li>
+        <li>
+            <div class="term-title">Autofagia</div>
+            <div class="term-definition">Processo de "autodigestão" da célula ("comer a si próprio") para digerir seus próprios componentes lisossômicos. É um mecanismo de sobrevivência em períodos de privação de nutrientes.</div>
+        </li>
     </ul>
-
-    <h2 class="category-title" onclick="toggleCategory('padroes')">Padrões de Necrose</h2>
-    <ul id="padroes" class="term-list">
+    
+    <h2 class="category-title" onclick="toggleCategory('padroes-necrose')">Padrões de Necrose</h2>
+    <ul id="padroes-necrose" class="term-list">
         <li>
             <div class="term-title">Necrose de Coagulação</div>
             <div class="term-definition">Causada por isquemia, onde o tecido afetado tem aparência de um coágulo.</div>
@@ -195,37 +215,53 @@
         </li>
         <li>
             <div class="term-title">Necrose Fibrinoide</div>
-            <div class="term-definition">Forma especial de necrose observada em reações imunes nos vasos sanguíneos. [cite_start]Complexos antígeno-anticorpo e proteínas plasmáticas se depositam, criando uma aparência róseo-brilhante amorfa[cite: 180, 181].</div>
+            <div class="term-definition">Forma especial de necrose observada em reações imunes nos vasos sanguíneos. Complexos antígeno-anticorpo e proteínas plasmáticas se depositam, criando uma aparência róseo-brilhante amorfa.</div>
+        </li>
+        <li>
+            <div class="term-title">Picnose</div>
+            <div class="term-definition">Estágio morfológico da necrose e apoptose, onde o núcleo da célula encolhe e se torna denso. </div>
+        </li>
+        <li>
+            <div class="term-title">Cariólise</div>
+            <div class="term-definition">Estágio final da necrose, onde o núcleo da célula é dissolvido (digestão do DNA). </div>
         </li>
     </ul>
 
-    <h2 class="category-title" onclick="toggleCategory('outros')">Outros Tipos de Morte Celular e Doenças Associadas</h2>
-    <ul id="outros" class="term-list">
+    <h2 class="category-title" onclick="toggleCategory('doencas')">Doenças Associadas</h2>
+    <ul id="doencas" class="term-list">
         <li>
-            <div class="term-title">Necroptose</div>
-            <div class="term-definition">Uma forma programada de necrose, que é uma morte celular inflamatória. [cite_start]Serve como defesa contra patógenos (defesa viral)[cite: 204, 205].</div>
+            <div class="term-title">EHAG (Esteatose Hepática Aguda da Gestação)</div>
+            <div class="term-definition">É uma doença rara e potencialmente fatal, exclusiva da gravidez, que ocorre no terceiro trimestre. Acredita-se que esteja associada a um defeito hereditário na beta-oxidação de ácidos graxos nas mitocôndrias fetais.</div>
         </li>
         <li>
-            <div class="term-title">Netose</div>
-            <div class="term-definition">Morte celular regulada por neutrófilos, que liberam redes extracelulares (NETs) formadas por DNA, histonas e proteínas antimicrobianas para prender e matar patógenos.</div>
+            <div class="term-title">Antracose Pulmonar</div>
+            <div class="term-definition">Acúmulo de carbono nos pulmões por inalação de poluentes.</div>
         </li>
         <li>
-            <div class="term-title">Autofagia</div>
-            <div class="term-definition">Processo de "autodigestão" da célula ("comer a si próprio") para digerir seus próprios componentes lisossômicos. [cite_start]É um mecanismo de sobrevivência em períodos de privação de nutrientes[cite: 250, 251].</div>
+            <div class="term-title">Doença de McArdle</div>
+            <div class="term-definition">Distúrbio metabólico raro causado pela deficiência da enzima miofosforilase, resultando em intolerância ao exercício e fraqueza muscular.</div>
+        </li>
+        <li>
+            <div class="term-title">Doença de Tay-Sachs</div>
+            <div class="term-definition">Condição genética rara, neurodegenerativa, causada pela deficiência da enzima hexosaminidase A, levando ao acúmulo de gangliosídeos nos neurônios e resultando em deterioração progressiva das funções mentais e motoras.</div>
+        </li>
+        <li>
+            <div class="term-title">Amiloidose Cardíaca</div>
+            <div class="term-definition">Acúmulo de proteínas no coração, causando cardiomiopatia restritiva.</div>
         </li>
         <li>
             <div class="term-title">Doenças por Apoptose Anormal</div>
             <div class="term-definition">
                 <ul>
-                    [cite_start]<li>**Aumento da Apoptose:** AIDS (destruição dos linfócitos T/CD4), doenças neurodegenerativas (Alzheimer, Parkinson), infarto do miocárdio por isquemia e osteoporose[cite: 651, 654, 657, 659].</li>
-                    [cite_start]<li>**Diminuição da Apoptose:** Câncer (linfoma folicular, carcinoma mamário), doenças autoimunes (lúpus eritematoso sistêmico) e infecções virais (herpesvírus)[cite: 665, 666, 669, 672, 673].</li>
+                    <li>**Aumento da Apoptose:** AIDS (destruição dos linfócitos T/CD4), doenças neurodegenerativas (Alzheimer, Parkinson), infarto do miocárdio por isquemia e osteoporose.</li>
+                    <li>**Diminuição da Apoptose:** Câncer (linfoma folicular, carcinoma mamário), doenças autoimunes (lúpus eritematoso sistêmico) e infecções virais (herpesvírus).</li>
                 </ul>
             </div>
         </li>
     </ul>
     
     <p style="text-align: center; font-size: 0.9em; color: #7f8c8d; margin-top: 30px;">
-        Este material foi criado com base em slides e artigos da disciplina de Patologia Geral.
+        Este material foi criado por Jose Arailes Feitosa Junior, IDOMED-Quixada TURMA 6A, com base em slides e artigos da disciplina de Patologia Geral.
     </p>
 
 </div>
