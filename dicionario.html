@@ -38,6 +38,7 @@
         .term-list {
             list-style-type: none;
             padding: 0;
+            display: none; /* Inicia a lista de termos fechada */
         }
         .term-list li {
             background: #ecf0f1;
@@ -75,7 +76,7 @@
     <h1>Patologia Geral: Memorex PR1 - IDOMED Quixada</h1>
     <p>Clique nos termos para ver as definições e te ajudar a memorizar!</p>
 
-    <h2 class="category-title" onclick="toggleCategory('acumulos')">Acúmulos Intracelulares</h2>
+     <h2 class="category-title" onclick="toggleCategory('acumulos')">Acúmulos Intracelulares</h2>
     <ul id="acumulos" class="term-list">
         <li>
             <div class="term-title">Acúmulo Intracelular</div>
@@ -219,11 +220,11 @@
         </li>
         <li>
             <div class="term-title">Picnose</div>
-            <div class="term-definition">Estágio morfológico da necrose e apoptose, onde o núcleo da célula encolhe e se torna denso. </div>
+            <div class="term-definition">Estágio morfológico da necrose e apoptose, onde o núcleo da célula encolhe e se torna denso.</div>
         </li>
         <li>
             <div class="term-title">Cariólise</div>
-            <div class="term-definition">Estágio final da necrose, onde o núcleo da célula é dissolvido (digestão do DNA). </div>
+            <div class="term-definition">Estágio final da necrose, onde o núcleo da célula é dissolvido (digestão do DNA).</div>
         </li>
     </ul>
 
@@ -260,7 +261,7 @@
         </li>
     </ul>
     
-    <p style="text-align: center; font-size: 0.9em; color: #7f8c8d; margin-top: 30px;">
+    <p style="text-align: center; font-size: 0.9em; color: #ffff00; margin-top: 30px;">
         Este material foi criado por Jose Arailes Feitosa Junior, IDOMED-Quixada TURMA 6A, com base em slides e artigos da disciplina de Patologia Geral.
     </p>
 
